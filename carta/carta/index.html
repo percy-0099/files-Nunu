@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6e3c5">
+  <title>Una carta para ti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hearts" aria-hidden="true"></div>
+
+  <main>
+    <!-- 1. PORTADA -->
+    <section id="intro" class="screen active">
+      <p class="hint">Hay algo que decirte</p>
+      <figure class="polaroid">
+        <img id="foto-portada" src="foto1.jpg" alt="Nosotros">
+        <figcaption id="nombres"></figcaption>
+      </figure>
+      <button id="sello" class="sello" aria-label="Abrir carta">Abrir</button>
+      <p class="hint small">Toca el sello</p>
+    </section>
+
+    <!-- 2. CARTA -->
+    <section id="carta" class="screen">
+      <article class="papel">
+        <div id="texto"></div>
+        <p id="firma" class="firma"></p>
+        <h2 id="pregunta"></h2>
+        <button id="si" class="boton">Sí, quiero ♥</button>
+      </article>
+    </section>
+
+    <!-- 3. JUNTOS -->
+    <section id="juntos" class="screen">
+      <h3>Llevamos</h3>
+      <div id="reloj" class="reloj">00:00:00</div>
+      <div id="galeria"></div>
+      <p id="final" class="final"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
