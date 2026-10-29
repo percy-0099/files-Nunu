@@ -1,0 +1,71 @@
+:root{
+  --crema:#f6e3c5; --papel:#fbefd8; --tinta:#5b3a24;
+  --acento:#b8431f; --dorado:#d9a25b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%}
+body{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  background:radial-gradient(circle at 50% 0,#fff3dc,var(--crema));
+  color:var(--tinta); text-align:center; overflow-x:hidden;
+  padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+}
+main{max-width:480px;margin:0 auto;padding:24px 20px 60px}
+.screen{display:none;flex-direction:column;align-items:center;gap:18px;min-height:90vh;justify-content:center}
+.screen.active{display:flex;animation:entra .9s ease both}
+@keyframes entra{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+.hint{font-style:italic;font-size:1.25rem;opacity:.8}
+.hint.small{font-size:1rem}
+
+/* Polaroid */
+.polaroid{background:#fff;padding:12px 12px 8px;width:78%;max-width:300px;
+  box-shadow:0 10px 30px rgba(91,58,36,.25);transform:rotate(-2deg)}
+.polaroid img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#e8d3b0}
+.polaroid figcaption{font-family:'Special Elite',monospace;padding:12px 0 6px;font-size:1.05rem}
+
+/* Sello de cera */
+.sello{
+  width:84px;height:84px;border-radius:50%;border:0;cursor:pointer;
+  background:radial-gradient(circle at 35% 30%,#d4502a,var(--acento) 60%,#7d2810);
+  color:#ffe9d0;font:italic 1.1rem 'Cormorant Garamond',serif;
+  box-shadow:0 6px 14px rgba(125,40,16,.5),inset 0 -4px 8px rgba(0,0,0,.25);
+  animation:latido 1.6s ease-in-out infinite;
+}
+.sello:active{transform:scale(.94)}
+@keyframes latido{50%{transform:scale(1.08)}}
+
+/* Carta */
+.papel{
+  background:linear-gradient(var(--papel),#f5e0bd);border:1px solid var(--dorado);
+  border-radius:6px;padding:28px 22px;width:100%;text-align:left;
+  box-shadow:0 12px 34px rgba(91,58,36,.28);
+}
+#texto p{font-size:1.25rem;line-height:1.55;margin-bottom:14px}
+.firma{text-align:right;font-style:italic;font-size:1.1rem;margin:6px 0 18px}
+.papel h2{font-size:1.6rem;text-align:center;color:var(--acento);margin-bottom:16px;font-style:italic}
+.boton{
+  display:block;margin:0 auto;padding:12px 34px;border:0;border-radius:30px;cursor:pointer;
+  background:linear-gradient(#d4602f,var(--acento));color:#fff4e3;
+  font:italic 1.3rem 'Cormorant Garamond',serif;box-shadow:0 6px 14px rgba(184,67,31,.4);
+}
+.boton:active{transform:scale(.96)}
+
+/* Juntos */
+#juntos h3{font-size:1.8rem;font-style:italic}
+.contador{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;width:100%}
+.contador div{background:var(--papel);border:1px solid var(--dorado);border-radius:8px;padding:12px 4px}
+.contador b{display:block;font-size:2rem;font-family:'Special Elite',monospace}
+.contador span{font-size:.9rem;opacity:.75}
+#galeria{display:flex;flex-direction:column;gap:22px;width:100%}
+#galeria figure{background:#fff;padding:10px 10px 6px;box-shadow:0 8px 22px rgba(91,58,36,.22)}
+#galeria figure:nth-child(odd){transform:rotate(1.2deg)}
+#galeria figure:nth-child(even){transform:rotate(-1.2deg)}
+#galeria img{width:100%;display:block;background:#e8d3b0;min-height:120px}
+#galeria figcaption{padding:10px 0 4px;font-size:1.15rem;font-style:italic}
+.final{font-size:1.7rem;font-style:italic;color:var(--acento);margin-top:10px}
+
+/* Corazones */
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:10}
+.heart{position:absolute;bottom:-30px;color:var(--acento);animation:sube linear forwards}
+@keyframes sube{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
