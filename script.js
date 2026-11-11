@@ -4,12 +4,12 @@ const CONFIG = {
   desde: "2026-10-19T00:00:00",            // fecha en que empezó todo
   fotoPortada: "foto1.jpeg",
   texto: [
-    "Hay algo que todavía no te he confesado. Algo que mis ojos llevan tiempo intentando decirte cada vez que te miran.",
-    "Porque contigo pasé algo diferente: fuiste colándote en mis pensamientos y en mis mejores días.",
-    "Y hoy, por fin, quiero hacértelo saber."
+    "Debo confesarte algo mi amor. Algo que llevo guardado durante un tiempo mi pequeña Nunu, algo que significa mucho para ambos.",
+    "Pasamos por muchas cosas. Pasamos por una etapa y yo estoy dispuesto a dar el siguiente paso contigo de la mano.",
+    "Hoy con total sinceridad deseo sabaer si..."
   ],
-  firma: "— El hombre que solo sabe amarte",
-  pregunta: "¿Quieres contarle a nuestros hijos que hoy inició oficialmente nuestra historia de amor?",
+  firma: "— Un jóven que solo desea un futuro a tu lado.",
+  pregunta: "¿Quieres ser mi Novia?",
   galeria: [
     { img: "foto2.jpeg", pie: "El primer día de nuestra vida" },
     { img: "foto3.jpeg", pie: "Cada momento contigo cuenta" }
